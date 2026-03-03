@@ -14,7 +14,7 @@ function VideoCard({ item, t }) {
     <div
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => { setHov(false); setTapped(false); }}
-      onClick={() => setTapped(o => !o)}
+      onClick={() => { setHov(false); setTapped(o => !o); }}
       style={{
         breakInside:"avoid", marginBottom:"1.2rem",
         background:t.card, border:`1px solid ${t.border}`,

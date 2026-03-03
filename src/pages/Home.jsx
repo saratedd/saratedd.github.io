@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { yourName, yourCity } from "../data/content";
+import { yourName, yourCity, yourMail, yourLinkedin, yourCVpath, homeDescription } from "../data/content";
 import { Btn } from "../components/UI";
 import { Mail, LinkedIn, Download } from "../components/Icons";
 
@@ -23,13 +23,13 @@ export default function Home({ t }) {
             Hi, I'm<br/><span style={{color:t.accent}}>{yourName}</span>
           </h1>
           <p style={{fontSize:"1rem", lineHeight:1.82, color:t.muted, maxWidth:520, marginBottom:"2rem"}}>
-            I'm an animator passionate about bringing stories to life through motion. From expressive 2D character work to polished motion graphics, I craft animations that connect with audiences and elevate brands.
+            {homeDescription}
           </p>
           <div style={{display:"flex", flexWrap:"wrap", gap:".75rem", marginBottom:"1.8rem", alignItems:"center"}}>
             <Btn label="View My Animations →" t={t} onClick={() => navigate("/animations")}/>
-            <Btn icon={<Mail/>}     label="Email Me"    href="mailto:you@email.com"                      t={t} outline/>
-            <Btn icon={<LinkedIn/>} label="LinkedIn"    href="https://linkedin.com/in/yourprofile"       t={t} outline/>
-            <Btn icon={<Download/>} label="Download CV" href="/cv_old.pdf"                               t={t} outline/>
+            <Btn icon={<Mail/>}     label="Email Me"    href={`mailto:${yourMail}`}                       t={t} outline/>
+            <Btn icon={<LinkedIn/>} label="LinkedIn"    href={yourLinkedin}                               t={t} outline/>
+            <Btn icon={<Download/>} label="Download CV" href={yourCVpath}                                 t={t} outline/>
           </div>
         </div>
 

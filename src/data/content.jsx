@@ -1,6 +1,10 @@
 // ─── Personal info ────────────────────────────────────────────────
 export const yourName = "Sara Tedeško";
 export const yourCity = "Zagreb, Croatia";
+export const yourMail = "sara.tedesko91@gmail.com";
+export const yourLinkedin = "https://linkedin.com/in/sara-tedesko/";
+export const yourCVpath = "/sara_tedesko_cv.pdf"
+export const homeDescription = "After years of working and studying software engineering, where both my bachelor’s and master’s thesis were of creative visual theme, I realized I wanted to get back to my creative passions. My technical background has developed my attention to detail, sharp focus and ability to learn new software systems quickly. Now I'm excited for a role with mix of both creative and technical."
 
 // ─── Themes ───────────────────────────────────────────────────────
 export const L = {
@@ -28,7 +32,7 @@ export const ANIMS = [
   {
     src:"/animations/hidra.mp4",
     projectFile:"/projects/hidra.aep",
-    desc:"A dynamic motion graphics piece exploring fluid movement and organic forms. Crafted in After Effects with custom-built shape layers.",
+    desc:"Graphics in animation were made using Canva and shape layers in After Effects. Animation was produced using keyframes and basic expressions (wiggle, loopOut) in After Effects. Project file available below:",
     tags:["After Effects","Motion Graphics","Canva"],
   },
   {
@@ -76,68 +80,83 @@ export const PHOTOS = [
 // ─── Experience ───────────────────────────────────────────────────
 export const WORK = [
   {
-    date:"2023 — Present",
-    title:"Junior Animator",
-    company:"Studio / Company Name",
-    desc:"Brief description of your role and key responsibilities.",
-    tags:["After Effects","Motion Graphics"],
+    date:"04.2023. - 10.2025.",
+    title:"Backend Engineer",
+    company:"Atomic Intelligence",
+    desc:"Worked closely with department lead to resolve bugs and create new solutions for the product.",
+    tags:["Java","Spring Boot", "PostgreSQL", "Git"],
   },
-  {
-    date:"2021 — 2023",
-    title:"Freelance Animator",
-    company:"Self-employed",
-    desc:"Worked with clients to produce animated content for social media and advertising.",
-    tags:["Video Editing","Illustration"],
-  },
+  // {
+  //   date:"2021 — 2023",
+  //   title:"Freelance Animator",
+  //   company:"Self-employed",
+  //   desc:"Worked with clients to produce animated content for social media and advertising.",
+  //   tags:["Video Editing","Illustration"],
+  // },
 ];
 
 export const VOLUNTEER = [
   {
-    date:"2022",
-    title:"Animation Mentor",
-    company:"Organisation / Event Name",
-    desc:"Brief description of your volunteer role and what you contributed.",
-    tags:["Mentoring","Teaching"],
+    date:" 10.2022.- 07.2023.",
+    title:"Multimedia Team Member",
+    company:"eSTUDENT",
+    desc:"Volunteer work for photographing events, editing event photos and videos, creating animations in Adobe After Effects.",
+    tags:["After Effects","Lightroom", "Motion Graphics", "Photography", "Video Editing", "Photo Editing"],
   },
   {
-    date:"2020 — 2021",
-    title:"Visual Arts Volunteer",
-    company:"Organisation Name",
-    desc:"Brief description of what you did and why it mattered.",
-    tags:["Photography"],
+    date:"04.2022. - 10.2023.",
+    title:"Content Creator",
+    company:"PsiHelp",
+    desc:"Volunteer work for a psychology awareness organization. Used Canva to create daily visuals for Instagram page and develop new templates while maintaining brand identity. Later promoted to Team Lead, responsible for planning and scheduling upcoming posts, and reviewing team-created posts to provide feedback and ensure alignment with brand standards.",
+    tags:["Canva", "Working in a team", "Strategic Planning"],
   },
 ];
 
 export const EDU = [
   {
-    date:"2017 — 2021",
-    title:"BA Animation / Fine Arts",
-    company:"University Name",
-    desc:"Optional: relevant coursework, thesis, or achievements.",
-    tags:["Animation","Fine Arts"],
+    date:"2022. - 2025.",
+    title:"Master of Software Engineering",
+    company:"Faculty of Electrical Engineering and Computing (FER)",
+    desc: (
+      <>
+        <strong>Final thesis:</strong> Edge detection in images 
+        using traditional and deep learning methods for the purpose of <strong>creating coloring pages</strong>
+      </>
+    ),
+    tags:["Python"],
+  },
+  {
+    date:"07.2022. - 08.2022.",
+    title:"Android Development",
+    company:"Infinum Academy",
+    desc:"Finished beginner course to Android development using Kotlin",
+    tags:["Android", "Kotlin"],
+  },
+  {
+    date:"2019. - 2022.",
+    title:"Bachelor of Software Engineering",
+    company:"Faculty of Electrical Engineering and Computing (FER)",
+    desc: (
+      <>
+      <strong>Final thesis:</strong> 
+      Adaptation of web application user interfaces to <strong>motion design concept</strong>
+      </>
+    ),
+      tags:["Motion Graphics","JavaScript"],
   },
 ];
 
 // ─── Skills ───────────────────────────────────────────────────────
 export const SKILLS_CATEGORIES = [
   {
-    category: "Soft Skills",
-    color: "#2a6e3a",
+    category: "Creative",
+    color: "#8b5a1a",
     skills: [
-      { name: "Strategic Planning" },
-      { name: "Problem Solving" },
-      { name: "Analytical Thinking" },
-      { name: "Creative Thinking" },
-      { name: "Attention to Detail" },
-      { name: "Quick Learner" },
-    ],
-  },
-  {
-    category: "Languages",
-    color: "#5a2a8b",
-    skills: [
-      { name: "Croatian" },
-      { name: "English" },
+      { name: "Motion Graphics" },
+      { name: "Illustration" },
+      { name: "Video Editing" },
+      { name: "Photography" },
+      { name: "Photo Editing" },
     ],
   },
   {
@@ -152,26 +171,37 @@ export const SKILLS_CATEGORIES = [
     ],
   },
   {
-    category: "Creative",
-    color: "#8b5a1a",
+    category: "Soft Skills",
+    color: "#2a6e3a",
     skills: [
-      { name: "Motion Graphics" },
-      { name: "Illustration" },
-      { name: "Video Editing" },
-      { name: "Photography" },
-      { name: "Photo Editing" },
+      { name: "Strategic Planning" },
+      { name: "Problem Solving" },
+      { name: "Analytical Thinking" },
+      { name: "Creative Thinking" },
+      { name: "Attention to Detail" },
+      { name: "Quick Learner" },
+      { name: "Working in a team" },
     ],
-  },
+  },  
   {
     category: "Technical",
     color: "#1a4a8b",
     skills: [
       { name: "Java" },
       { name: "Python" },
+      { name: "JavaScript" },
       { name: "Spring Boot" },
       { name: "PostgreSQL" },
       { name: "HTML / CSS" },
       { name: "Git" },
+    ],
+  },
+  {
+    category: "Languages",
+    color: "#5a2a8b",
+    skills: [
+      { name: "Croatian" },
+      { name: "English" },
     ],
   },
 ];

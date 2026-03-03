@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { yourName } from "../data/content";
+import { yourName, yourMail, yourLinkedin } from "../data/content";
 import { Hamburger, Close } from "./Icons";
 import { ThemeToggle } from "./UI";
 import { D } from "../data/content";
@@ -23,7 +23,7 @@ export default function Layout({ children, t, isDark, setDark }) {
   const tab  = path === "" ? "home" : path.split("/")[0];
 
   return (
-    <div style={{background:t.bg, minHeight:"100vh", color:t.text, fontFamily:"'Inter',sans-serif", transition:"background .3s,color .3s", overflowX:"hidden"}}>
+    <div style={{background:t.bg, minHeight:"100vh", color:t.text, fontFamily:"'Inter',sans-serif", transition:"background .3s,color .3s", overflowX:"hidden", display:"flex", flexDirection:"column"}}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
         *{box-sizing:border-box;margin:0;padding:0}
@@ -116,14 +116,14 @@ export default function Layout({ children, t, isDark, setDark }) {
       </nav>
 
       {/* ── Page content ── */}
-      {children}
+      <main style={{flex:1}}>{children}</main>
 
       {/* ── Footer ── */}
       <footer style={{background:t.nav, color:"rgba(249,245,239,.6)", textAlign:"center", padding:"1.5rem", fontSize:".79rem", letterSpacing:".08em", transition:"background .3s"}}>
-        © 2025 {yourName} &nbsp;·&nbsp;
-        <a href="mailto:you@email.com" style={{color:t.navActive, textDecoration:"none"}}>you@email.com</a>
+        © 2026 {yourName} &nbsp;·&nbsp;
+        <a href={`mailto:${yourMail}`} style={{color:t.navActive, textDecoration:"none"}}>{yourMail}</a>
         &nbsp;·&nbsp;
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" style={{color:t.navActive, textDecoration:"none"}}>LinkedIn</a>
+        <a href={yourLinkedin} target="_blank" rel="noopener noreferrer" style={{color:t.navActive, textDecoration:"none"}}>LinkedIn</a>
       </footer>
     </div>
   );
