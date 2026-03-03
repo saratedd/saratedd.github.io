@@ -41,9 +41,9 @@ export default function Layout({ children, t, isDark, setDark }) {
         <div style={{maxWidth:1100, margin:"0 auto", padding:"0 1.5rem", display:"flex", alignItems:"center", justifyContent:"space-between", gap:"1rem"}}>
 
           {/* Logo */}
-          <div style={{fontFamily:"'Playfair Display',serif", color:t.navActive, fontSize:"1.2rem", fontWeight:700, letterSpacing:".04em", padding:"1rem 0", flexShrink:0}}>
+          <button onClick={() => navigate("/")} style={{fontFamily:"'Playfair Display',serif", color:t.navActive, fontSize:"1.2rem", fontWeight:700, letterSpacing:".04em", padding:"1rem 0", flexShrink:0, background:"none", border:"none", cursor:"pointer"}}>
             {yourName}
-          </div>
+          </button>
 
           {/* Desktop links */}
           <ul className="desk" style={{listStyle:"none", gap:0, flexShrink:1, display:"flex"}}>

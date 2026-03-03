@@ -4,21 +4,24 @@ import { SecHead, Tag } from "../components/UI";
 import { PlayIcon, DownloadSmall } from "../components/Icons";
 
 function VideoCard({ item, t }) {
-  const [err, setErr]   = useState(false);
-  const [hov, setHov]   = useState(false);
+  const [err,    setErr]    = useState(false);
+  const [hov,    setHov]    = useState(false);
+  const [tapped, setTapped] = useState(false);
+  const open = hov || tapped;
   const ext = item.projectFile ? item.projectFile.split(".").pop().toUpperCase() : "AEP";
 
   return (
     <div
       onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
+      onMouseLeave={() => { setHov(false); setTapped(false); }}
+      onClick={() => setTapped(o => !o)}
       style={{
         breakInside:"avoid", marginBottom:"1.2rem",
         background:t.card, border:`1px solid ${t.border}`,
         borderRadius:4, overflow:"hidden", position:"relative",
-        transition:"all .25s",
-        boxShadow: hov ? "0 8px 28px rgba(139,26,26,.18)" : "none",
-        transform: hov ? "translateY(-3px)" : "translateY(0)",
+        transition:"all .25s", cursor:"pointer",
+        boxShadow: open ? "0 8px 28px rgba(139,26,26,.18)" : "none",
+        transform: open ? "translateY(-3px)" : "translateY(0)",
       }}
     >
       {/* Video or placeholder */}
@@ -34,14 +37,14 @@ function VideoCard({ item, t }) {
       {/* Hover overlay */}
       <div style={{
         position:"absolute", inset:0,
-        background: hov ? t.overlayBg : "rgba(0,0,0,0)",
-        backdropFilter: hov ? "blur(1px)" : "none",
+        background: open ? t.overlayBg : "rgba(0,0,0,0)",
+        backdropFilter: open ? "blur(1px)" : "none",
         display:"flex", flexDirection:"column",
         justifyContent:"center", alignItems:"center",
         padding:"1.4rem", gap:"1rem",
-        opacity: hov ? 1 : 0,
+        opacity: open ? 1 : 0,
         transition:"opacity .3s ease, background .3s ease",
-        pointerEvents: hov ? "auto" : "none",
+        pointerEvents: open ? "auto" : "none",
       }}>
         <p style={{
           color:t.overlayText, fontSize:".9rem", lineHeight:1.7,
@@ -89,7 +92,7 @@ export default function Animations({ t, cols }) {
     <div style={{maxWidth:1100, margin:"0 auto", padding:"4rem 1.5rem 5rem"}}>
       <SecHead title="Animations" sub="Selected Work" t={t}/>
       <p style={{fontSize:".86rem", color:t.muted, marginBottom:"2rem", lineHeight:1.7}}>
-        Hover over any animation to read about the project and download the source file.
+        Hover or tap any animation to read about the project and download the source file.
       </p>
       <div style={{columns:cols, columnGap:"1.2rem"}}>
         {ANIMS.map((item, i) => <VideoCard key={i} item={item} t={t}/>)}
