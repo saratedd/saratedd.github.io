@@ -42,29 +42,30 @@ export const ANIMS = [
     tags:["After Effects","Motion Graphics"],
   },
   {
-    src:"/animations/lightbulb.mp4",
+    src:"/animations/lightbulb.mp4", //https://www.youtube.com/watch?v=tEPbHV2NNdQ
     projectFile:"/projects/lightbulb.aep",
-    desc:"Interaction prototype and animated UI concept exploring transition states and micro-interactions.",
+    desc:"Graphics in animation were made using shape layers in After Effects. To create the glowing light from lightbulb, glow and fill effects were used. Project file available below:",
+    tags:["After Effects", "Motion Graphics"],
+  },
+  {
+    src:"/animations/video4.mp4",
+    projectFile:"/projects/video4.aep",
+    desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
+    tags:["Canva","Motion Graphics"],
+  },
+  {
+    src:"/animations/video5.mp4",
+    projectFile:"/projects/video4.aep",
+    desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
+    tags:["Canva","Motion Graphics"],
+  },
+    
+  {
+    src:"/animations/video6.mp4",
+    projectFile:"/projects/video6.aep",
+    desc:"Product reveal animation finished with motion polish in After Effects.",
     tags:["After Effects"],
   },
-  // {
-  //   src:"/animations/video4.mp4",
-  //   projectFile:"/projects/video4.aep",
-  //   desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
-  //   tags:["Canva","Motion Graphics"],
-  // },
-  // {
-  //   src:"/animations/video5.mp4",
-  //   projectFile:"/projects/video5.aep",
-  //   desc:"Composited animation with photo-real texture passes and frame-by-frame refinements.",
-  //   tags:["After Effects"],
-  // },
-  // {
-  //   src:"/animations/video6.mp4",
-  //   projectFile:"/projects/video6.aep",
-  //   desc:"Product reveal animation finished with motion polish in After Effects.",
-  //   tags:["After Effects"],
-  // },
 ];
 
 // ─── Photos ───────────────────────────────────────────────────────
