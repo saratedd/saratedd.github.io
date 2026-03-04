@@ -36,35 +36,35 @@ export const ANIMS = [
     tags:["After Effects","Motion Graphics","Canva"],
   },
   {
-    src:"/animations/video2.mp4",
-    projectFile:"/projects/video2.aep",
+    src:"/animations/color_loop.mp4", //https://www.youtube.com/watch?v=zSQn4rgHoaI&list=PLZ5xnNT7VWnZ9lp4u6B3fDsyIm6p865Le&index=8
+    projectFile:"/projects/loop.aep",
     desc:"Illustration-driven animation combining hand-drawn elements with precise vector motion for a clean editorial feel.",
     tags:["After Effects","Illustration"],
   },
-  {
-    src:"/animations/video3.mp4",
-    projectFile:"/projects/video3.aep",
-    desc:"Interaction prototype and animated UI concept exploring transition states and micro-interactions.",
-    tags:["After Effects"],
-  },
-  {
-    src:"/animations/video4.mp4",
-    projectFile:"/projects/video4.aep",
-    desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
-    tags:["Canva","Motion Graphics"],
-  },
-  {
-    src:"/animations/video5.mp4",
-    projectFile:"/projects/video5.aep",
-    desc:"Composited animation with photo-real texture passes and frame-by-frame refinements.",
-    tags:["After Effects"],
-  },
-  {
-    src:"/animations/video6.mp4",
-    projectFile:"/projects/video6.aep",
-    desc:"Product reveal animation finished with motion polish in After Effects.",
-    tags:["After Effects"],
-  },
+  // {
+  //   src:"/animations/video3.mp4",
+  //   projectFile:"/projects/video3.aep",
+  //   desc:"Interaction prototype and animated UI concept exploring transition states and micro-interactions.",
+  //   tags:["After Effects"],
+  // },
+  // {
+  //   src:"/animations/video4.mp4",
+  //   projectFile:"/projects/video4.aep",
+  //   desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
+  //   tags:["Canva","Motion Graphics"],
+  // },
+  // {
+  //   src:"/animations/video5.mp4",
+  //   projectFile:"/projects/video5.aep",
+  //   desc:"Composited animation with photo-real texture passes and frame-by-frame refinements.",
+  //   tags:["After Effects"],
+  // },
+  // {
+  //   src:"/animations/video6.mp4",
+  //   projectFile:"/projects/video6.aep",
+  //   desc:"Product reveal animation finished with motion polish in After Effects.",
+  //   tags:["After Effects"],
+  // },
 ];
 
 // ─── Photos ───────────────────────────────────────────────────────
