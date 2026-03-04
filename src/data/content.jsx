@@ -41,12 +41,12 @@ export const ANIMS = [
     desc:"Graphics in animation were made using shape layers in After Effects. After making the animation portion with the first set of colors, pre-comp was made and used for the second set of colors. Project file available below:",
     tags:["After Effects","Motion Graphics"],
   },
-  // {
-  //   src:"/animations/video3.mp4",
-  //   projectFile:"/projects/video3.aep",
-  //   desc:"Interaction prototype and animated UI concept exploring transition states and micro-interactions.",
-  //   tags:["After Effects"],
-  // },
+  {
+    src:"/animations/lightbulb.mp4",
+    projectFile:"/projects/lightbulb.aep",
+    desc:"Interaction prototype and animated UI concept exploring transition states and micro-interactions.",
+    tags:["After Effects"],
+  },
   // {
   //   src:"/animations/video4.mp4",
   //   projectFile:"/projects/video4.aep",
