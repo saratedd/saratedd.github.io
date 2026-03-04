@@ -48,24 +48,24 @@ export const ANIMS = [
     tags:["After Effects", "Motion Graphics"],
   },
   {
-    src:"/animations/video4.mp4",
-    projectFile:"/projects/video4.aep",
+    src:"/animations/auto.mp4",
+    projectFile:"/projects/auto.aep",
     desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
-    tags:["Canva","Motion Graphics"],
+    tags:["After Effects","Motion Graphics", "Canva"],
   },
-  {
-    src:"/animations/video5.mp4",
-    projectFile:"/projects/video4.aep",
-    desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
-    tags:["Canva","Motion Graphics"],
-  },
+  // {
+  //   src:"/animations/video5.mp4",
+  //   projectFile:"/projects/video4.aep",
+  //   desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
+  //   tags:["Canva","Motion Graphics"],
+  // },
     
-  {
-    src:"/animations/video6.mp4",
-    projectFile:"/projects/video6.aep",
-    desc:"Product reveal animation finished with motion polish in After Effects.",
-    tags:["After Effects"],
-  },
+  // {
+  //   src:"/animations/video6.mp4",
+  //   projectFile:"/projects/video6.aep",
+  //   desc:"Product reveal animation finished with motion polish in After Effects.",
+  //   tags:["After Effects"],
+  // },
 ];
 
 // ─── Photos ───────────────────────────────────────────────────────
