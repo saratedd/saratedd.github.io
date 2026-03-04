@@ -38,8 +38,8 @@ export const ANIMS = [
   {
     src:"/animations/color_loop.mp4", //https://www.youtube.com/watch?v=zSQn4rgHoaI&list=PLZ5xnNT7VWnZ9lp4u6B3fDsyIm6p865Le&index=8
     projectFile:"/projects/loop.aep",
-    desc:"Illustration-driven animation combining hand-drawn elements with precise vector motion for a clean editorial feel.",
-    tags:["After Effects","Illustration"],
+    desc:"Graphics in animation were made using shape layers in After Effects. After making the animation portion with the first set of colors, pre-comp was made and used for the second set of colors. Project file available below:",
+    tags:["After Effects","Motion Graphics"],
   },
   // {
   //   src:"/animations/video3.mp4",
