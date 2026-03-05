@@ -11,7 +11,7 @@ const SECTIONS = [
 
 function SubNav({ active, t, onSelect }) {
   return (
-    <div style={{ display:"flex", gap:0, borderBottom:`2px solid ${t.border}`, marginBottom:"2.5rem" }}>
+    <div className="subnav-scroll" style={{ display:"flex", gap:0, borderBottom:`2px solid ${t.border}`, marginBottom:"2.5rem", overflowX:"auto" }}>
       {SECTIONS.map(({ id, label }) => {
         const isActive = active === id;
         return (
@@ -22,7 +22,7 @@ function SubNav({ active, t, onSelect }) {
               background:"none", border:"none", cursor:"pointer",
               fontFamily:"'Inter',sans-serif", fontSize:".88rem", fontWeight:500,
               letterSpacing:".08em", textTransform:"uppercase",
-              padding:".75rem 1.4rem",
+              padding:".75rem 1.4rem", flexShrink:0,
               color: isActive ? t.accent : t.muted,
               position:"relative", transition:"color .2s",
               borderBottom: isActive ? `2px solid ${t.accent}` : "2px solid transparent",

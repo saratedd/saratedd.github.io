@@ -15,11 +15,13 @@ const TABS = [
 
 export default function Layout({ children, t, isDark, setDark }) {
   const [mOpen, setMOpen] = useState(false);
+  const [workOpen, setWorkOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   const path = location.pathname.replace(/^\/+/, "");
   const tab  = path === "" ? "home" : path.split("/")[0];
+  const workSection = path.startsWith("work/") ? path.split("/")[1] : null;
 
   return (
     <div style={{background:t.bg, minHeight:"100vh", color:t.text, fontFamily:"'Inter',sans-serif", transition:"background .3s,color .3s", overflowX:"hidden", display:"flex", flexDirection:"column"}}>
@@ -33,6 +35,8 @@ export default function Layout({ children, t, isDark, setDark }) {
           .desk{display:none!important}
           .mob{display:flex!important}
         }
+        .subnav-scroll{scrollbar-width:none}
+        .subnav-scroll::-webkit-scrollbar{display:none}
       `}</style>
 
       {/* ── Nav ── */}
@@ -87,26 +91,80 @@ export default function Layout({ children, t, isDark, setDark }) {
           </div>
         </div>
 
+        {/* Mobile menu backdrop */}
+        {mOpen && (
+          <div
+            onClick={() => { setMOpen(false); setWorkOpen(false); }}
+            style={{position:"fixed", inset:0, zIndex:99}}
+          />
+        )}
+
         {/* Mobile menu */}
         {mOpen && (
-          <div style={{background:t.nav, borderTop:`1px solid rgba(255,255,255,.08)`, padding:".4rem 0"}}>
-            {TABS.map(([id, label]) => (
-              <button
-                key={id}
-                onClick={() => { navigate(id === "home" ? "/" : id === "work" ? "/work/animations" : `/${id}`); setMOpen(false); }}
-                style={{
-                  display:"block", width:"100%", textAlign:"left",
-                  background: tab === id ? "rgba(255,255,255,.08)" : "none",
-                  border:"none", cursor:"pointer",
-                  color: tab === id ? t.navActive : t.navText,
-                  fontFamily:"'Inter',sans-serif", fontSize:".88rem", fontWeight:500,
-                  letterSpacing:".1em", textTransform:"uppercase",
-                  padding:".85rem 1.5rem", transition:"background .15s",
-                }}
-              >
-                {label}
-              </button>
-            ))}
+          <div style={{background:t.nav, borderTop:`1px solid rgba(255,255,255,.08)`, padding:".4rem 0", position:"relative", zIndex:101}}>
+            {TABS.map(([id, label]) => {
+              if (id === "work") {
+                return (
+                  <div key={id}>
+                    {/* My Work expandable row */}
+                    <button
+                      onClick={() => setWorkOpen(o => !o)}
+                      style={{
+                        display:"flex", width:"100%", textAlign:"left", alignItems:"center", justifyContent:"space-between",
+                        background: tab === id ? "rgba(255,255,255,.08)" : "none",
+                        border:"none", cursor:"pointer",
+                        color: tab === id ? t.navActive : t.navText,
+                        fontFamily:"'Inter',sans-serif", fontSize:".88rem", fontWeight:500,
+                        letterSpacing:".1em", textTransform:"uppercase",
+                        padding:".85rem 1.5rem", transition:"background .15s",
+                      }}
+                    >
+                      {label}
+                      <span style={{fontSize:".7rem", opacity:.7, marginLeft:".5rem"}}>{workOpen ? "▲" : "▼"}</span>
+                    </button>
+                    {workOpen && (
+                      <div>
+                        {[["animations","Animations"],["photography","Photography"],["illustrations","Illustrations"]].map(([sid, slabel]) => (
+                          <button
+                            key={sid}
+                            onClick={() => { navigate(`/work/${sid}`); setMOpen(false); setWorkOpen(false); }}
+                            style={{
+                              display:"block", width:"100%", textAlign:"left",
+                              background: workSection === sid ? "rgba(255,255,255,.06)" : "none",
+                              border:"none", cursor:"pointer",
+                              color: workSection === sid ? t.navActive : t.navText,
+                              fontFamily:"'Inter',sans-serif", fontSize:".82rem", fontWeight:400,
+                              letterSpacing:".08em", textTransform:"uppercase",
+                              padding:".7rem 1.5rem .7rem 2.8rem", transition:"background .15s",
+                              opacity: workSection === sid ? 1 : 0.75,
+                            }}
+                          >
+                            {slabel}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <button
+                  key={id}
+                  onClick={() => { navigate(id === "home" ? "/" : `/${id}`); setMOpen(false); }}
+                  style={{
+                    display:"block", width:"100%", textAlign:"left",
+                    background: tab === id ? "rgba(255,255,255,.08)" : "none",
+                    border:"none", cursor:"pointer",
+                    color: tab === id ? t.navActive : t.navText,
+                    fontFamily:"'Inter',sans-serif", fontSize:".88rem", fontWeight:500,
+                    letterSpacing:".1em", textTransform:"uppercase",
+                    padding:".85rem 1.5rem", transition:"background .15s",
+                  }}
+                >
+                  {label}
+                </button>
+              );
+            })}
             <div style={{padding:".6rem 1.5rem .8rem"}}>
               <ThemeToggle isDark={isDark} setDark={setDark} t={t}/>
             </div>
