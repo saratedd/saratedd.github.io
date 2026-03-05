@@ -98,12 +98,12 @@ export const ILLUSTRATIONS = [
 
 // ─── Photos ───────────────────────────────────────────────────────
 export const PHOTOS = [
-  {src:"/photos/photo1.jpg", h:280, desc:"", tags:[]},
-  {src:"/photos/photo2.jpg", h:200, desc:"", tags:[]},
-  {src:"/photos/photo3.jpg", h:240, desc:"", tags:[]},
-  {src:"/photos/photo4.jpg", h:220, desc:"", tags:[]},
-  {src:"/photos/photo5.jpg", h:310, desc:"", tags:[]},
-  {src:"/photos/photo6.jpg", h:190, desc:"", tags:[]},
+  // {src:"/photos/photo1.jpg", h:280, desc:"", tags:[]},
+  // {src:"/photos/photo2.jpg", h:200, desc:"", tags:[]},
+  // {src:"/photos/photo3.jpg", h:240, desc:"", tags:[]},
+  // {src:"/photos/photo4.jpg", h:220, desc:"", tags:[]},
+  // {src:"/photos/photo5.jpg", h:310, desc:"", tags:[]},
+  // {src:"/photos/photo6.jpg", h:190, desc:"", tags:[]},
 ];
 
 // ─── Experience ───────────────────────────────────────────────────
