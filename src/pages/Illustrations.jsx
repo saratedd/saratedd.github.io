@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { PHOTOS } from "../data/content";
+import { ILLUSTRATIONS } from "../data/content";
 import { SecHead, Tag } from "../components/UI";
 import { ImageIcon } from "../components/Icons";
 
-function PhotoCard({ item, t }) {
+function IllustrationCard({ item, t }) {
   const [err,    setErr]    = useState(false);
   const [hov,    setHov]    = useState(false);
   const [tapped, setTapped] = useState(false);
@@ -17,18 +17,18 @@ function PhotoCard({ item, t }) {
       style={{
         breakInside:"avoid", marginBottom:"1.2rem",
         border:`1px solid ${t.border}`, borderRadius:4, overflow:"hidden",
-        position:"relative", transition:"all .25s", cursor: open || (item.desc || item.tags?.length > 0) ? "pointer" : "default",
+        position:"relative", transition:"all .25s", cursor: (item.desc || item.tags?.length > 0) ? "pointer" : "default",
         boxShadow: open ? "0 8px 28px rgba(139,26,26,.18)" : "none",
         transform: open ? "translateY(-3px)" : "translateY(0)",
       }}
     >
       {err ? (
-        <div style={{background:t.ph, height:item.h, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:".4rem", color:t.muted, fontSize:".72rem", letterSpacing:".1em", textTransform:"uppercase"}}>
+        <div style={{background:t.ph, height:item.h ?? 240, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:".4rem", color:t.muted, fontSize:".72rem", letterSpacing:".1em", textTransform:"uppercase"}}>
           <span style={{opacity:.32}}><ImageIcon/></span>
           {item.src.split("/").pop()}
         </div>
       ) : (
-        <img src={item.src} alt="" onError={() => setErr(true)} style={{width:"100%", height:item.h, objectFit:"cover", display:"block"}}/>
+        <img src={item.src} alt="" onError={() => setErr(true)} style={{width:"100%", height:item.h ?? "auto", objectFit: item.h ? "cover" : "contain", display:"block"}}/>
       )}
 
       {item.desc && (
@@ -62,12 +62,24 @@ function PhotoCard({ item, t }) {
   );
 }
 
-export default function Photography({ t, cols, embedded }) {
+export default function Illustrations({ t, cols, embedded }) {
+  if (ILLUSTRATIONS.length === 0) {
+    return (
+      <div style={embedded ? {} : {maxWidth:1100, margin:"0 auto", padding:"4rem 1.5rem 5rem"}}>
+        {!embedded && <SecHead title="Illustrations" sub="Visual Work" t={t}/>}
+        <div style={{textAlign:"center", padding:"5rem 1rem", color:t.muted}}>
+          <p style={{fontSize:"1.1rem", letterSpacing:".08em", textTransform:"uppercase", marginBottom:".75rem"}}>Coming Soon</p>
+          <p style={{fontSize:".85rem", lineHeight:1.7}}>Illustration work will be added here.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div style={embedded ? {} : {maxWidth:1100, margin:"0 auto", padding:"4rem 1.5rem 5rem"}}>
-      {!embedded && <SecHead title="Photography" sub="Visual Work" t={t}/>}
+      {!embedded && <SecHead title="Illustrations" sub="Visual Work" t={t}/>}
       <div style={{columns:cols, columnGap:"1.2rem"}}>
-        {PHOTOS.map((item, i) => <PhotoCard key={i} item={item} t={t}/>)}
+        {ILLUSTRATIONS.map((item, i) => <IllustrationCard key={i} item={item} t={t}/>)}
       </div>
     </div>
   );

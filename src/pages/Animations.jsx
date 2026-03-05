@@ -87,9 +87,9 @@ function VideoCard({ item, t }) {
   );
 }
 
-export default function Animations({ t, cols }) {
+export default function Animations({ t, cols, embedded }) {
   return (
-    <div style={{maxWidth:1100, margin:"0 auto", padding:"4rem 1.5rem 5rem"}}>
+    <div style={embedded ? {} : {maxWidth:1100, margin:"0 auto", padding:"4rem 1.5rem 5rem"}}>
       <SecHead title="Animations" sub="Selected Work" t={t}/>
       <p style={{fontSize:".86rem", color:t.muted, marginBottom:"2rem", lineHeight:1.7}}>
         Hover or tap any animation to read about the project and download the source file.

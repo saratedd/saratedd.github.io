@@ -6,12 +6,11 @@ import { ThemeToggle } from "./UI";
 import { D } from "../data/content";
 
 const TABS = [
-  ["home",        "Home"],
-  ["animations",  "Animations"],
-  ["photography", "Photography"],
-  ["experience",  "Experience"],
-  ["education",   "Education"],
-  ["skills",      "Skills"],
+  ["home",       "Home"],
+  ["work",       "My Work"],
+  ["experience", "Experience"],
+  ["education",  "Education"],
+  ["skills",     "Skills"],
 ];
 
 export default function Layout({ children, t, isDark, setDark }) {
@@ -50,7 +49,7 @@ export default function Layout({ children, t, isDark, setDark }) {
             {TABS.map(([id, label]) => (
               <li key={id}>
                 <button
-                  onClick={() => navigate(id === "home" ? "/" : `/${id}`)}
+                  onClick={() => navigate(id === "home" ? "/" : id === "work" ? "/work/animations" : `/${id}`)}
                   style={{
                     background:"none", border:"none", cursor:"pointer",
                     color: tab === id ? t.navActive : t.navText,
@@ -94,7 +93,7 @@ export default function Layout({ children, t, isDark, setDark }) {
             {TABS.map(([id, label]) => (
               <button
                 key={id}
-                onClick={() => { navigate(id === "home" ? "/" : `/${id}`); setMOpen(false); }}
+                onClick={() => { navigate(id === "home" ? "/" : id === "work" ? "/work/animations" : `/${id}`); setMOpen(false); }}
                 style={{
                   display:"block", width:"100%", textAlign:"left",
                   background: tab === id ? "rgba(255,255,255,.08)" : "none",

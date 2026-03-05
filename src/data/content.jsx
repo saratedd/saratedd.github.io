@@ -67,14 +67,43 @@ export const ANIMS = [
   // },
 ];
 
+// ─── Illustrations ────────────────────────────────────────────────
+export const ILLUSTRATIONS = [
+  {
+    src:"/illustrations/1.png",
+    desc:"Coloring page for my coloring book My Cozy Winter",
+    tags:["Procreate", "Illustration"]
+  },
+  {
+    src:"/illustrations/2.png",
+    desc:"Coloring page for my coloring book My Cozy Winter",
+    tags:["Procreate", "Illustration"]
+  },
+  {
+    src:"/illustrations/3.png",
+    desc:"Coloring page for my coloring book My Cozy Winter",
+    tags:["Procreate", "Illustration"]
+  },
+  {
+    src:"/illustrations/4.png",
+    desc:"Coloring page for my coloring book My Cozy Winter",
+    tags:["Procreate", "Illustration"]
+  },
+  {
+    src:"/illustrations/5.png",
+    desc:"Coloring page for my coloring book My Cozy Winter",
+    tags:["Procreate", "Illustration"]
+  },
+];
+
 // ─── Photos ───────────────────────────────────────────────────────
 export const PHOTOS = [
-  {src:"/photos/photo1.jpg",h:280},
-  {src:"/photos/photo2.jpg",h:200},
-  {src:"/photos/photo3.jpg",h:240},
-  {src:"/photos/photo4.jpg",h:220},
-  {src:"/photos/photo5.jpg",h:310},
-  {src:"/photos/photo6.jpg",h:190},
+  {src:"/photos/photo1.jpg", h:280, desc:"", tags:[]},
+  {src:"/photos/photo2.jpg", h:200, desc:"", tags:[]},
+  {src:"/photos/photo3.jpg", h:240, desc:"", tags:[]},
+  {src:"/photos/photo4.jpg", h:220, desc:"", tags:[]},
+  {src:"/photos/photo5.jpg", h:310, desc:"", tags:[]},
+  {src:"/photos/photo6.jpg", h:190, desc:"", tags:[]},
 ];
 
 // ─── Experience ───────────────────────────────────────────────────
