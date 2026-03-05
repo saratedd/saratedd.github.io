@@ -53,13 +53,12 @@ export const ANIMS = [
     desc:"Animation of a car driving on a hill in the shape of sin function. Car is an element from Canva, and other shapes are made as shape Layers in After Effects. Expression loopOut() is used for hills and Math.sin() for car movement.",
     tags:["After Effects","Motion Graphics", "Canva"],
   },
-  // {
-  //   src:"/animations/video5.mp4",
-  //   projectFile:"/projects/video4.aep",
-  //   desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
-  //   tags:["Canva","Motion Graphics"],
-  // },
-    
+  {
+    src:"/animations/switch.mp4",
+    projectFile:"/projects/switch.aep",
+    desc:"Social-first motion graphics piece designed for brand storytelling, built with reusable template components.",
+    tags:["Canva","Motion Graphics"],
+  },
   // {
   //   src:"/animations/video6.mp4",
   //   projectFile:"/projects/video6.aep",
