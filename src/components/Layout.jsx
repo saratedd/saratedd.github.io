@@ -16,6 +16,7 @@ const TABS = [
 export default function Layout({ children, t, isDark, setDark }) {
   const [mOpen, setMOpen] = useState(false);
   const [workOpen, setWorkOpen] = useState(false);
+  const [workHover, setWorkHover] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -52,7 +53,10 @@ export default function Layout({ children, t, isDark, setDark }) {
           {/* Desktop links */}
           <ul className="desk" style={{listStyle:"none", gap:0, flexShrink:1, display:"flex"}}>
             {TABS.map(([id, label]) => (
-              <li key={id}>
+              <li key={id} style={{position:"relative"}}
+                onMouseEnter={() => id === "work" && setWorkHover(true)}
+                onMouseLeave={() => id === "work" && setWorkHover(false)}
+              >
                 <button
                   onClick={() => navigate(id === "home" ? "/" : id === "work" ? "/work/animations" : `/${id}`)}
                   style={{
@@ -62,9 +66,13 @@ export default function Layout({ children, t, isDark, setDark }) {
                     letterSpacing:".1em", textTransform:"uppercase",
                     padding:"1.3rem 1.1rem", position:"relative",
                     transition:"color .2s", whiteSpace:"nowrap",
+                    display:"flex", alignItems:"center", gap:".35rem",
                   }}
                 >
                   {label}
+                  {id === "work" && (
+                    <span style={{fontSize:".6rem", opacity:.7, transition:"transform .2s", display:"inline-block", transform: workHover ? "rotate(180deg)" : "rotate(0deg)"}}>▼</span>
+                  )}
                   <span style={{
                     position:"absolute", bottom:0,
                     left:  tab === id ? "1rem" : "50%",
@@ -73,6 +81,38 @@ export default function Layout({ children, t, isDark, setDark }) {
                     borderRadius:"2px 2px 0 0", transition:"left .25s,right .25s",
                   }}/>
                 </button>
+
+                {/* Work dropdown */}
+                {id === "work" && workHover && (
+                  <div style={{
+                    position:"absolute", top:"100%", left:0,
+                    background:t.nav, borderTop:`1px solid rgba(255,255,255,.08)`,
+                    borderRadius:"0 0 6px 6px",
+                    boxShadow:"0 8px 24px rgba(0,0,0,.25)",
+                    minWidth:160, zIndex:200,
+                    overflow:"hidden",
+                  }}>
+                    {[["animations","Animations"],["illustrations","Illustrations"],["photography","Photography"]].map(([sid, slabel]) => (
+                      <button
+                        key={sid}
+                        onClick={() => { navigate(`/work/${sid}`); setWorkHover(false); }}
+                        style={{
+                          display:"block", width:"100%", textAlign:"left",
+                          background: workSection === sid ? "rgba(255,255,255,.08)" : "none",
+                          border:"none", cursor:"pointer",
+                          color: workSection === sid ? t.navActive : t.navText,
+                          fontFamily:"'Inter',sans-serif", fontSize:".78rem", fontWeight:500,
+                          letterSpacing:".1em", textTransform:"uppercase",
+                          padding:".75rem 1.2rem", transition:"background .15s",
+                        }}
+                        onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,.08)"}
+                        onMouseLeave={e => e.currentTarget.style.background = workSection === sid ? "rgba(255,255,255,.08)" : "none"}
+                      >
+                        {slabel}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ul>

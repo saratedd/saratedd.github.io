@@ -84,27 +84,27 @@ export const ANIMS = [
 // ─── Illustrations ────────────────────────────────────────────────
 export const ILLUSTRATIONS = [
   {
-    src:"/illustrations/1.png",
+    src:"/illustrations/1.webp",
     desc:"Coloring page for my coloring book My Cozy Winter",
     tags:["Procreate", "Illustration"]
   },
   {
-    src:"/illustrations/2.png",
+    src:"/illustrations/2.webp",
     desc:"Coloring page for my coloring book My Cozy Winter",
     tags:["Procreate", "Illustration"]
   },
   {
-    src:"/illustrations/3.png",
+    src:"/illustrations/3.webp",
     desc:"Coloring page for my coloring book My Cozy Winter",
     tags:["Procreate", "Illustration"]
   },
   {
-    src:"/illustrations/4.png",
+    src:"/illustrations/4.webp",
     desc:"Coloring page for my coloring book My Cozy Winter",
     tags:["Procreate", "Illustration"]
   },
   {
-    src:"/illustrations/5.png",
+    src:"/illustrations/5.webp",
     desc:"Coloring page for my coloring book My Cozy Winter",
     tags:["Procreate", "Illustration"]
   },
@@ -113,33 +113,33 @@ export const ILLUSTRATIONS = [
 // ─── Photos ───────────────────────────────────────────────────────
 export const PHOTOS = [
   {
-    src:"/photos/DSC_6454.jpg",
-    desc:"",
-    tags:["Photography", "Photo editing", "Lightroom"]
-  },
-  {
-    src:"/photos/DSC_6503.jpg",
-    desc:"Location: Ploče, Croatia",
-    tags:["Photography", "Photo editing", "Lightroom"]
-  },
-  {
-    src:"/photos/DSC_6742.jpg",
+    src:"/photos/DSC_6742.webp",
     desc:"Location: Porto, Portugal",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
-    src:"/photos/DSC_6955.jpg",
+    src:"/photos/DSC_6955.webp",
     desc:"Location: Fátima, Portugal",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
-    src:"/photos/DSC_7173.jpg",
+    src:"/photos/DSC_7173.webp",
     desc:"Location: Aveiro, Portugal",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
-    src:"/photos/DSC_7181.jpg",
+    src:"/photos/DSC_7181.webp",
     desc:"Location: Braga, Portugal",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_6454.webp",
+    desc:"",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_6503.webp",
+    desc:"Location: Ploče, Croatia",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
 ];
