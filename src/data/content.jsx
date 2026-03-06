@@ -151,7 +151,7 @@ export const VOLUNTEER = [
     title:"Content Creator",
     company:"PsiHelp",
     desc:"Volunteer work for a psychology awareness organization. Used Canva to create daily visuals for Instagram page and develop new templates while maintaining brand identity. Later promoted to Team Lead, responsible for planning and scheduling upcoming posts, and reviewing team-created posts to provide feedback and ensure alignment with brand standards.",
-    tags:["Canva", "Working in a team", "Strategic Planning"],
+    tags:["Canva", "Working In a Team", "Strategic Planning"],
   },
 ];
 
@@ -223,7 +223,7 @@ export const SKILLS_CATEGORIES = [
       { name: "Creative Thinking" },
       { name: "Attention to Detail" },
       { name: "Quick Learner" },
-      { name: "Working in a team" },
+      { name: "Working In a Team" },
     ],
   },  
   {
