@@ -6,8 +6,8 @@ import Illustrations from "./Illustrations";
 
 const SECTIONS = [
   { id: "animations",    label: "Animations"    },
-  { id: "photography",   label: "Photography"   },
   { id: "illustrations", label: "Illustrations" },
+  { id: "photography",   label: "Photography"   },
 ];
 
 function InactiveTab({ id, label, t, onSelect }) {
@@ -40,7 +40,7 @@ function InactiveTab({ id, label, t, onSelect }) {
 function SubNav({ active, t, onSelect }) {
   return (
     <div style={{
-      display: "flex", alignItems: "center", gap: ".6rem", flexWrap: "wrap",
+      display: "flex", alignItems: "center", justifyContent: "center", gap: ".6rem", flexWrap: "wrap",
       borderBottom: `2px solid ${t.accent}`,
       paddingBottom: "1.1rem", marginBottom: "2.8rem",
     }}>
@@ -73,7 +73,7 @@ export default function Work({ t, cols }) {
   const handleSelect = (id) => navigate(`/work/${id}`);
 
   return (
-    <div style={{ maxWidth:1100, margin:"0 auto", padding:"4rem 1.5rem 5rem" }}>
+    <div style={{ padding:"2rem 2rem 5rem" }}>
       <SubNav active={active} t={t} onSelect={handleSelect} />
       {active === "animations"    && <Animations  t={t} cols={cols} embedded />}
       {active === "photography"   && <Photography t={t} cols={cols} embedded />}

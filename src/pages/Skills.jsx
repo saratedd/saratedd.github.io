@@ -33,7 +33,7 @@ function SkillChip({ name, color, t }) {
 
 export default function Skills({ t }) {
   return (
-    <div style={{maxWidth:1100, margin:"0 auto", padding:"4rem 1.5rem 5rem"}}>
+    <div style={{maxWidth:1100, margin:"0 auto", padding:"2rem 1.5rem 5rem"}}>
       <SecHead title="Skills" sub="Tools & Expertise" t={t}/>
       <div style={{display:"flex", flexDirection:"column", gap:"3rem"}}>
         {SKILLS_CATEGORIES.map(({ category, color, skills }) => (

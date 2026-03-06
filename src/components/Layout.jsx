@@ -6,7 +6,7 @@ import { ThemeToggle } from "./UI";
 import { D } from "../data/content";
 
 const TABS = [
-  ["home",       "Home"],
+  ["home",       "About"],
   ["work",       "My Work"],
   ["experience", "Experience"],
   ["education",  "Education"],
@@ -37,6 +37,7 @@ export default function Layout({ children, t, isDark, setDark }) {
         }
         .subnav-scroll{scrollbar-width:none}
         .subnav-scroll::-webkit-scrollbar{display:none}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
       `}</style>
 
       {/* ── Nav ── */}
@@ -124,7 +125,7 @@ export default function Layout({ children, t, isDark, setDark }) {
                     </button>
                     {workOpen && (
                       <div>
-                        {[["animations","Animations"],["photography","Photography"],["illustrations","Illustrations"]].map(([sid, slabel]) => (
+                        {[["animations","Animations"],["illustrations","Illustrations"],["photography","Photography"]].map(([sid, slabel]) => (
                           <button
                             key={sid}
                             onClick={() => { navigate(`/work/${sid}`); setMOpen(false); setWorkOpen(false); }}

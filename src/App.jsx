@@ -18,9 +18,10 @@ export default function App() {
   // Responsive masonry columns
   useEffect(() => {
     const update = () => {
-      if      (window.innerWidth < 600) setCols(1);
-      else if (window.innerWidth < 900) setCols(2);
-      else                              setCols(3);
+      if      (window.innerWidth < 600)  setCols(1);
+      else if (window.innerWidth < 900)  setCols(2);
+      else if (window.innerWidth < 1400) setCols(3);
+      else                               setCols(4);
     };
     update();
     window.addEventListener("resize", update);

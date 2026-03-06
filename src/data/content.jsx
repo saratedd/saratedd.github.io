@@ -4,7 +4,7 @@ export const yourCity = "Zagreb, Croatia";
 export const yourMail = "sara.tedesko91@gmail.com";
 export const yourLinkedin = "https://linkedin.com/in/sara-tedesko/";
 export const yourCVpath = "/sara_tedesko_cv.pdf"
-export const homeDescription = "After years of working and studying software engineering, where both my bachelor’s and master’s thesis were of creative visual theme, I realized I wanted to get back to my creative passions. My technical background has developed my attention to detail, sharp focus and ability to learn new software systems quickly. Now I'm excited for a role with mix of both creative and technical."
+export const homeDescription = "After years of working and studying software engineering, where both my bachelor’s and master’s thesis were of creative visual theme, I realized I wanted to get back to my creative passions. My technical background has developed my attention to detail, sharp focus and ability to learn new software systems quickly. I’m excited about opportunities in creative roles, as well as positions that combine creativity with technical problem-solving."
 
 // ─── Themes ───────────────────────────────────────────────────────
 export const L = {
@@ -15,6 +15,7 @@ export const L = {
   toggle:"#f0e9de", toggleIcon:"#8b1a1a", card:"#f0e9de",
   ph:"linear-gradient(135deg,#e8ddd0,#d4c4b0)",
   overlayBg:"rgba(26,14,8,0.72)", overlayText:"#f9f5ef",
+  cardBorder:"#141010",
 };
 
 export const D = {
@@ -25,6 +26,7 @@ export const D = {
   toggle:"#2a2018", toggleIcon:"#c94040", card:"#1e1815",
   ph:"linear-gradient(135deg,#2a2018,#1a1410)",
   overlayBg:"rgba(10,6,4,0.78)", overlayText:"#f0e9de",
+  cardBorder:"#f9f5ef",
 };
 
 // ─── Animations ───────────────────────────────────────────────────
@@ -32,51 +34,51 @@ export const ANIMS = [
   {
     src:"/animations/hidra.mp4",
     projectFile:"/projects/hidra.aep",
-    desc:"Graphics in animation were made using Canva and shape layers in After Effects. Animation was produced using keyframes and basic expressions (wiggle, loopOut) in After Effects. Project file available below:",
+    desc:"This is an original animation. Graphics in animation were made using Canva and shape layers in After Effects. Animation was produced using keyframes and basic expressions (wiggle, loopOut) in After Effects. Project file available below:",
     tags:["After Effects","Motion Graphics","Canva"],
   },
   {
     src:"/animations/color_loop.mp4", //https://www.youtube.com/watch?v=zSQn4rgHoaI&list=PLZ5xnNT7VWnZ9lp4u6B3fDsyIm6p865Le&index=8
     projectFile:"/projects/loop.aep",
-    desc:"Graphics in animation were made using shape layers in After Effects. After making the animation portion with the first set of colors, pre-comp was made and used for the second set of colors. Project file available below:",
+    desc:"This is a practice animation. Graphics in animation were made using shape layers in After Effects. After making the animation portion with the first set of colors, pre-comp was made and used for the second set of colors. Project file available below:",
     tags:["After Effects","Motion Graphics"],
   },
   {
     src:"/animations/lightbulb.mp4", //https://www.youtube.com/watch?v=tEPbHV2NNdQ
     projectFile:"/projects/lightbulb.aep",
-    desc:"Graphics in animation were made using shape layers in After Effects. To create the glowing light from lightbulb, glow and fill effects were used. Project file available below:",
+    desc:"This is a practice animation. Graphics in animation were made using shape layers in After Effects. To create the glowing light from lightbulb, glow and fill effects were used. Project file available below:",
     tags:["After Effects", "Motion Graphics"],
   },
   {
     src:"/animations/auto.mp4",
     projectFile:"/projects/auto.aep",
-    desc:"Animation of a car driving on a hill in the shape of sin function. Car is an element from Canva, and other shapes are made as shape Layers in After Effects. Expression loopOut() is used for hills and Math.sin() for car movement.",
+    desc:"This is an original animation. Animation of a car driving on a hill in the shape of sin function. Car is an element from Canva, and other shapes are made as shape Layers in After Effects. Expression loopOut() is used for hills and Math.sin() for car movement.",
     tags:["After Effects","Motion Graphics", "Canva"],
   },
   {
     src:"/animations/switch.mp4",
     projectFile:"/projects/switch.aep",
-    desc:"Animation for a switch between light and dark modes. Accompanying elements of clouds and stars are from Canva while everything else is made in After Effects using shape and solid layers.",
+    desc:"This is an original animation. Animation for a switch between light and dark modes. Accompanying elements of clouds and stars are from Canva while everything else is made in After Effects using shape and solid layers.",
     tags:["After Effects", "Motion Graphics", "Canva"],
   },
-  {
-    src:"/animations/video6.mp4",
-    projectFile:"/projects/video6.aep",
-    desc:"Product reveal animation finished with motion polish in After Effects.",
-    tags:["After Effects"],
-  },
-  {
-    src:"/animations/video6.mp4",
-    projectFile:"/projects/video6.aep",
-    desc:"Product reveal animation finished with motion polish in After Effects.",
-    tags:["After Effects"],
-  },
-  {
-    src:"/animations/video6.mp4",
-    projectFile:"/projects/video6.aep",
-    desc:"Product reveal animation finished with motion polish in After Effects.",
-    tags:["After Effects"],
-  },
+  // {
+  //   src:"/animations/video6.mp4",
+  //   projectFile:"/projects/video6.aep",
+  //   desc:"Product reveal animation finished with motion polish in After Effects.",
+  //   tags:["After Effects"],
+  // },
+  // {
+  //   src:"/animations/video6.mp4",
+  //   projectFile:"/projects/video6.aep",
+  //   desc:"Product reveal animation finished with motion polish in After Effects.",
+  //   tags:["After Effects"],
+  // },
+  // {
+  //   src:"/animations/video6.mp4",
+  //   projectFile:"/projects/video6.aep",
+  //   desc:"Product reveal animation finished with motion polish in After Effects.",
+  //   tags:["After Effects"],
+  // },
 ];
 
 // ─── Illustrations ────────────────────────────────────────────────
