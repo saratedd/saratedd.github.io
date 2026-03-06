@@ -34,31 +34,31 @@ export const ANIMS = [
   {
     src:"/animations/hidra.mp4",
     projectFile:"/projects/hidra.aep",
-    desc:"This is an original animation. Graphics in animation were made using Canva and shape layers in After Effects. Animation was produced using keyframes and basic expressions (wiggle, loopOut) in After Effects. Project file available below:",
+    desc:"*This is an original animation.* Graphics in animation were made using Canva and shape layers in After Effects. Animation was produced using keyframes and basic expressions (wiggle, loopOut) in After Effects.",
     tags:["After Effects","Motion Graphics","Canva"],
   },
   {
     src:"/animations/color_loop.mp4", //https://www.youtube.com/watch?v=zSQn4rgHoaI&list=PLZ5xnNT7VWnZ9lp4u6B3fDsyIm6p865Le&index=8
     projectFile:"/projects/loop.aep",
-    desc:"This is a practice animation. Graphics in animation were made using shape layers in After Effects. After making the animation portion with the first set of colors, pre-comp was made and used for the second set of colors. Project file available below:",
+    desc:"*This is a practice animation.* Graphics in animation were made using shape layers in After Effects. After making the animation portion with the first set of colors, pre-comp was made and used for the second set of colors.",
     tags:["After Effects","Motion Graphics"],
   },
   {
     src:"/animations/lightbulb.mp4", //https://www.youtube.com/watch?v=tEPbHV2NNdQ
     projectFile:"/projects/lightbulb.aep",
-    desc:"This is a practice animation. Graphics in animation were made using shape layers in After Effects. To create the glowing light from lightbulb, glow and fill effects were used. Project file available below:",
+    desc:"*This is a practice animation.* Graphics in animation were made using shape layers in After Effects. To create the glowing light from lightbulb, glow and fill effects were used.",
     tags:["After Effects", "Motion Graphics"],
   },
   {
     src:"/animations/auto.mp4",
     projectFile:"/projects/auto.aep",
-    desc:"This is an original animation. Animation of a car driving on a hill in the shape of sin function. Car is an element from Canva, and other shapes are made as shape Layers in After Effects. Expression loopOut() is used for hills and Math.sin() for car movement.",
+    desc:"*This is an original animation.* Animation of a car driving on a hill in the shape of sin function. Car is an element from Canva, and other shapes are made as shape layers in After Effects. Expression loopOut() is used for hills and Math.sin() for car movement.",
     tags:["After Effects","Motion Graphics", "Canva"],
   },
   {
     src:"/animations/switch.mp4",
     projectFile:"/projects/switch.aep",
-    desc:"This is an original animation. Animation for a switch between light and dark modes. Accompanying elements of clouds and stars are from Canva while everything else is made in After Effects using shape and solid layers.",
+    desc:"*This is an original animation.* Animation for a switch between light and dark modes. Accompanying elements of clouds and stars are from Canva while everything else is made in After Effects using shape and solid layers.",
     tags:["After Effects", "Motion Graphics", "Canva"],
   },
   // {
