@@ -112,12 +112,36 @@ export const ILLUSTRATIONS = [
 
 // ─── Photos ───────────────────────────────────────────────────────
 export const PHOTOS = [
-  // {src:"/photos/photo1.jpg", h:280, desc:"", tags:[]},
-  // {src:"/photos/photo2.jpg", h:200, desc:"", tags:[]},
-  // {src:"/photos/photo3.jpg", h:240, desc:"", tags:[]},
-  // {src:"/photos/photo4.jpg", h:220, desc:"", tags:[]},
-  // {src:"/photos/photo5.jpg", h:310, desc:"", tags:[]},
-  // {src:"/photos/photo6.jpg", h:190, desc:"", tags:[]},
+  {
+    src:"/photos/DSC_6454.jpg",
+    desc:"",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_6503.jpg",
+    desc:"Location: Ploče, Croatia",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_6742.jpg",
+    desc:"Location: Porto, Portugal",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_6955.jpg",
+    desc:"Location: Fátima, Portugal",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_7173.jpg",
+    desc:"Location: Aveiro, Portugal",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_7181.jpg",
+    desc:"Location: Braga, Portugal",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
 ];
 
 // ─── Experience ───────────────────────────────────────────────────
