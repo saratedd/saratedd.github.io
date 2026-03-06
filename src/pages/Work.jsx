@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Animations    from "./Animations";
 import Photography   from "./Photography";
@@ -9,30 +10,55 @@ const SECTIONS = [
   { id: "illustrations", label: "Illustrations" },
 ];
 
+function InactiveTab({ id, label, t, onSelect }) {
+  const [hov, setHov] = useState(false);
+  return (
+    <button
+      onClick={() => onSelect(id)}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        background: hov ? t.tagBg : "transparent",
+        border: `1.5px solid ${hov ? t.accent : t.border}`,
+        borderRadius: 2,
+        cursor: "pointer",
+        fontFamily: "'Inter',sans-serif",
+        fontSize: ".72rem", fontWeight: 600,
+        letterSpacing: ".13em", textTransform: "uppercase",
+        color: hov ? t.accent : t.muted,
+        padding: ".35rem .85rem",
+        transition: "all .2s",
+        transform: hov ? "scale(1.07)" : "scale(1)",
+        transformOrigin: "center bottom",
+      }}
+    >
+      {label}
+    </button>
+  );
+}
+
 function SubNav({ active, t, onSelect }) {
   return (
-    <div className="subnav-scroll" style={{ display:"flex", gap:0, borderBottom:`2px solid ${t.border}`, marginBottom:"2.5rem", overflowX:"auto" }}>
-      {SECTIONS.map(({ id, label }) => {
-        const isActive = active === id;
-        return (
-          <button
-            key={id}
-            onClick={() => onSelect(id)}
-            style={{
-              background:"none", border:"none", cursor:"pointer",
-              fontFamily:"'Inter',sans-serif", fontSize:".88rem", fontWeight:500,
-              letterSpacing:".08em", textTransform:"uppercase",
-              padding:".75rem 1.4rem", flexShrink:0,
-              color: isActive ? t.accent : t.muted,
-              position:"relative", transition:"color .2s",
-              borderBottom: isActive ? `2px solid ${t.accent}` : "2px solid transparent",
-              marginBottom:"-2px",
-            }}
-          >
-            {label}
-          </button>
-        );
-      })}
+    <div style={{
+      display: "flex", alignItems: "center", gap: ".6rem", flexWrap: "wrap",
+      borderBottom: `2px solid ${t.accent}`,
+      paddingBottom: "1.1rem", marginBottom: "2.8rem",
+    }}>
+      {SECTIONS.map(({ id, label }) =>
+        active === id
+          ? <span key={id} style={{
+              background: t.accent,
+              border: `1.5px solid ${t.accent}`,
+              borderRadius: 2,
+              fontFamily: "'Inter',sans-serif",
+              fontSize: ".72rem", fontWeight: 600,
+              letterSpacing: ".13em", textTransform: "uppercase",
+              color: t.bg,
+              padding: ".35rem .85rem",
+              display: "inline-block",
+            }}>{label}</span>
+          : <InactiveTab key={id} id={id} label={label} t={t} onSelect={onSelect} />
+      )}
     </div>
   );
 }

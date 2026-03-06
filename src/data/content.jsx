@@ -59,12 +59,24 @@ export const ANIMS = [
     desc:"Animation for a switch between light and dark modes. Accompanying elements of clouds and stars are from Canva while everything else is made in After Effects using shape and solid layers.",
     tags:["After Effects", "Motion Graphics", "Canva"],
   },
-  // {
-  //   src:"/animations/video6.mp4",
-  //   projectFile:"/projects/video6.aep",
-  //   desc:"Product reveal animation finished with motion polish in After Effects.",
-  //   tags:["After Effects"],
-  // },
+  {
+    src:"/animations/video6.mp4",
+    projectFile:"/projects/video6.aep",
+    desc:"Product reveal animation finished with motion polish in After Effects.",
+    tags:["After Effects"],
+  },
+  {
+    src:"/animations/video6.mp4",
+    projectFile:"/projects/video6.aep",
+    desc:"Product reveal animation finished with motion polish in After Effects.",
+    tags:["After Effects"],
+  },
+  {
+    src:"/animations/video6.mp4",
+    projectFile:"/projects/video6.aep",
+    desc:"Product reveal animation finished with motion polish in After Effects.",
+    tags:["After Effects"],
+  },
 ];
 
 // ─── Illustrations ────────────────────────────────────────────────
@@ -221,7 +233,6 @@ export const SKILLS_CATEGORIES = [
       { name: "JavaScript" },
       { name: "Spring Boot" },
       { name: "PostgreSQL" },
-      { name: "HTML / CSS" },
       { name: "Git" },
     ],
   },

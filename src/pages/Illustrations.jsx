@@ -23,12 +23,12 @@ function IllustrationCard({ item, t }) {
       }}
     >
       {err ? (
-        <div style={{background:t.ph, height:item.h ?? 240, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:".4rem", color:t.muted, fontSize:".72rem", letterSpacing:".1em", textTransform:"uppercase"}}>
+        <div style={{background:t.ph, height:200, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:".4rem", color:t.muted, fontSize:".72rem", letterSpacing:".1em", textTransform:"uppercase"}}>
           <span style={{opacity:.32}}><ImageIcon/></span>
           {item.src.split("/").pop()}
         </div>
       ) : (
-        <img src={item.src} alt="" onError={() => setErr(true)} style={{width:"100%", height:item.h ?? "auto", objectFit: item.h ? "cover" : "contain", display:"block"}}/>
+        <img src={item.src} alt="" onError={() => setErr(true)} style={{width:"100%", height:"auto", display:"block"}}/>
       )}
 
       {item.desc && (
