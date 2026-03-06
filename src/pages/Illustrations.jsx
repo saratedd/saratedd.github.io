@@ -30,7 +30,6 @@ function IllustrationCard({ item, t, index }) {
 
   return (
     <div style={{
-      breakInside:"avoid", marginBottom:"1.2rem",
       animation:"fadeUp .9s ease both",
       animationDelay:`${index * 0.12}s`,
     }}>
@@ -102,10 +101,12 @@ export default function Illustrations({ t, cols, embedded }) {
     );
   }
 
+  const illCols = Math.min(cols, ILLUSTRATIONS.length) || 1;
+
   return (
     <div style={embedded ? {} : {maxWidth:1100, margin:"0 auto", padding:"2rem 1.5rem 5rem"}}>
       {!embedded && <SecHead title="Illustrations" sub="Visual Work" t={t}/>}
-      <div style={{columns:cols, columnGap:"1.2rem"}}>
+      <div style={{display:"grid", gridTemplateColumns:`repeat(${illCols}, 1fr)`, gap:"1.2rem", alignItems:"start"}}>
         {ILLUSTRATIONS.map((item, i) => <IllustrationCard key={i} item={item} t={t} index={i}/>)}
       </div>
     </div>

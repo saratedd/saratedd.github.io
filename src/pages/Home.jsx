@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { yourName, yourCity, yourMail, yourLinkedin, yourCVpath, homeDescription } from "../data/content";
 import { Btn } from "../components/UI";
-import { Mail, LinkedIn, Download } from "../components/Icons";
+import { Mail, LinkedIn, FileText } from "../components/Icons";
 
 export default function Home({ t }) {
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ export default function Home({ t }) {
             <Btn label="View My Work →" t={t} onClick={() => navigate("/animations")}/>
             <Btn icon={<Mail/>}     label="Email Me"    href={`mailto:${yourMail}`}                       t={t} outline/>
             <Btn icon={<LinkedIn/>} label="LinkedIn"    href={yourLinkedin}                               t={t} outline/>
-            <Btn icon={<Download/>} label="Download CV" href={yourCVpath}                                 t={t} outline/>
+            <Btn icon={<FileText/>} label="View CV" href={yourCVpath}                                 t={t} outline/>
           </div>
         </div>
 

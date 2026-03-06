@@ -214,6 +214,18 @@ export const SKILLS_CATEGORIES = [
     ],
   },
   {
+    category: "Technical",
+    color: "#1a4a8b",
+    skills: [
+      { name: "Java" },
+      { name: "Python" },
+      { name: "JavaScript" },
+      { name: "Spring Boot" },
+      { name: "PostgreSQL" },
+      { name: "Git" },
+    ],
+  },
+  {
     category: "Soft Skills",
     color: "#2a6e3a",
     skills: [
@@ -224,18 +236,6 @@ export const SKILLS_CATEGORIES = [
       { name: "Attention to Detail" },
       { name: "Quick Learner" },
       { name: "Working In a Team" },
-    ],
-  },  
-  {
-    category: "Technical",
-    color: "#1a4a8b",
-    skills: [
-      { name: "Java" },
-      { name: "Python" },
-      { name: "JavaScript" },
-      { name: "Spring Boot" },
-      { name: "PostgreSQL" },
-      { name: "Git" },
     ],
   },
   {
