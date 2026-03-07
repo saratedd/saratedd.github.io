@@ -27,9 +27,9 @@ export default function Home({ t }) {
           </p>
           <div style={{display:"flex", flexWrap:"wrap", gap:".75rem", marginBottom:"1.8rem", alignItems:"center"}}>
             <Btn label="View My Work →" t={t} onClick={() => navigate("/animations")}/>
-            <Btn icon={<Mail/>}     label="Email Me"    href={`mailto:${yourMail}`}                       t={t} outline/>
+            <Btn icon={<Mail/>}     label="Email me"    href={`mailto:${yourMail}`}                       t={t} outline/>
             <Btn icon={<LinkedIn/>} label="LinkedIn"    href={yourLinkedin}                               t={t} outline/>
-            <Btn icon={<FileText/>} label="View CV" href={yourCVpath}                                 t={t} outline/>
+            <Btn icon={<FileText/>} label="View my CV" href={yourCVpath}                                 t={t} outline/>
           </div>
         </div>
 
