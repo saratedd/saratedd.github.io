@@ -1,18 +1,51 @@
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState, useLayoutEffect, useEffect, useRef } from "react";
 import { PHOTOS } from "../data/content";
 import { SecHead, Tag } from "../components/UI";
 import { ImageIcon } from "../components/Icons";
 
-function PhotoCard({ item, t, index }) {
+function Lightbox({ item, onClose }) {
+  useEffect(() => {
+    const onKey = e => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position:"fixed", inset:0, zIndex:1000,
+        background:"rgba(0,0,0,.82)",
+        display:"flex", alignItems:"center", justifyContent:"center",
+        padding:"1.5rem",
+        animation:"fadeIn .2s ease",
+      }}
+    >
+      <img
+        src={item.src}
+        alt=""
+        onClick={e => e.stopPropagation()}
+        style={{
+          maxWidth:"100%", maxHeight:"100%",
+          objectFit:"contain",
+          borderRadius:6,
+          boxShadow:"0 16px 64px rgba(0,0,0,.6)",
+          animation:"scaleIn .2s ease",
+        }}
+      />
+    </div>
+  );
+}
+
+function PhotoCard({ item, t, index, onOpen }) {
   const [err,      setErr]      = useState(false);
   const [hov,      setHov]      = useState(false);
-  const [tapped,   setTapped]   = useState(false);
   const [descSize, setDescSize] = useState(".9rem");
   const overlayRef = useRef(null);
   const descRef    = useRef(null);
   const measured   = useRef(false);
   const hasInfo = item.desc || item.tags?.length > 0;
-  const open = (hov || tapped) && hasInfo;
+  const open = hov && hasInfo;
 
   useLayoutEffect(() => {
     if (!open || measured.current || !overlayRef.current || !descRef.current) return;
@@ -36,12 +69,12 @@ function PhotoCard({ item, t, index }) {
     }}>
       <div
         onMouseEnter={() => setHov(true)}
-        onMouseLeave={() => { setHov(false); setTapped(false); }}
-        onClick={() => { setHov(false); setTapped(o => !o); }}
+        onMouseLeave={() => setHov(false)}
+        onClick={() => { if (!err) onOpen(item); }}
         style={{
           borderRadius:8, overflow:"hidden",
           position:"relative", transition:"all .25s",
-          cursor: hasInfo ? "pointer" : "default",
+          cursor: err ? "default" : "zoom-in",
           boxShadow: open ? "0 8px 28px rgba(139,26,26,.18)" : "none",
           transform: open ? "translateY(-3px)" : "translateY(0)",
         }}
@@ -65,7 +98,7 @@ function PhotoCard({ item, t, index }) {
             padding:"1.4rem", gap:".8rem",
             opacity: open ? 1 : 0,
             transition:"opacity .3s ease, background .3s ease",
-            pointerEvents: open ? "auto" : "none",
+            pointerEvents:"none",
             overflow:"hidden",
           }}>
             {item.desc && (
@@ -90,12 +123,17 @@ function PhotoCard({ item, t, index }) {
 }
 
 export default function Photography({ t, cols, embedded }) {
+  const [lightbox, setLightbox] = useState(null);
+
   return (
     <div style={embedded ? {} : {maxWidth:1100, margin:"0 auto", padding:"2rem 1.5rem 5rem"}}>
       {!embedded && <SecHead title="Photography" sub="Visual Work" t={t}/>}
       <div style={{columns:cols, columnGap:"1.2rem"}}>
-        {PHOTOS.map((item, i) => <PhotoCard key={i} item={item} t={t} index={i}/>)}
+        {PHOTOS.map((item, i) => (
+          <PhotoCard key={i} item={item} t={t} index={i} onOpen={setLightbox}/>
+        ))}
       </div>
+      {lightbox && <Lightbox item={lightbox} onClose={() => setLightbox(null)}/>}
     </div>
   );
 }
