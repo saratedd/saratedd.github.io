@@ -235,6 +235,7 @@ export const SKILLS_CATEGORIES = [
       { name: "Lightroom" },
       { name: "Canva" },
       { name: "Procreate" },
+      { name: "Notion" },
     ],
   },
   {
@@ -260,6 +261,7 @@ export const SKILLS_CATEGORIES = [
       { name: "Attention to Detail" },
       { name: "Quick Learner" },
       { name: "Working In a Team" },
+      { name: "Organizational Skills" },
     ],
   },
   {
