@@ -235,7 +235,7 @@ export const PHOTOS = [
   },
   {
     src:"/photos/IMG8-4378.webp",
-    desc:"Location: SC, Ploče, Croatia",
+    desc:"Location: SC, Zagreb, Croatia, 2023",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
 ];
