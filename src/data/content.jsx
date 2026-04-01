@@ -114,32 +114,128 @@ export const ILLUSTRATIONS = [
 export const PHOTOS = [
   {
     src:"/photos/DSC_6742.webp",
-    desc:"Location: Porto, Portugal",
+    desc:"Location: Porto, Portugal, 2024",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
     src:"/photos/DSC_6955.webp",
-    desc:"Location: Fátima, Portugal",
+    desc:"Location: Fátima, Portugal, 2024",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
     src:"/photos/DSC_7173.webp",
-    desc:"Location: Aveiro, Portugal",
+    desc:"Location: Aveiro, Portugal, 2024",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
     src:"/photos/DSC_7181.webp",
-    desc:"Location: Braga, Portugal",
+    desc:"Location: Braga, Portugal, 2024",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
     src:"/photos/DSC_6454.webp",
-    desc:"",
+    desc:"Location: A1, Zagreb, Croatia, 2023",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
   {
     src:"/photos/DSC_6503.webp",
-    desc:"Location: Ploče, Croatia",
+    desc:"Location: Ploče, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+
+
+
+
+
+
+  {
+    src:"/photos/DSC_4628.webp",
+    desc:"Location: Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_4630.webp",
+    desc:"Location: Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_4635.webp",
+    desc:"Location: Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_4664.webp",
+    desc:"Location: Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_4670.webp",
+    desc:"Location: Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_4713.webp",
+    desc:"Location: FER, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_4737.webp",
+    desc:"Location: FER, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_4801.webp",
+    desc:"Location: FER, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_5679.webp",
+    desc:"Location: FER, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/DSC_5992.webp",
+    desc:"Location: Algebra, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG4-0015.webp",
+    desc:"Location: FER, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG4-0016.webp",
+    desc:"Location: FER, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG6-0037.webp",
+    desc:"Location: KING ICT, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG8-3938-2.webp",
+    desc:"Location: SC, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG8-4164.webp",
+    desc:"Location: SC, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG8-4218.webp",
+    desc:"Location: SC, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG8-4231.webp",
+    desc:"Location: SC, Zagreb, Croatia, 2023",
+    tags:["Photography", "Photo editing", "Lightroom"]
+  },
+  {
+    src:"/photos/IMG8-4378.webp",
+    desc:"Location: SC, Ploče, Croatia",
     tags:["Photography", "Photo editing", "Lightroom"]
   },
 ];
