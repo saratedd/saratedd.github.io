@@ -243,6 +243,12 @@ export const PHOTOS = [
 // ─── Experience ───────────────────────────────────────────────────
 export const WORK = [
   {
+    date:"04.2026. - present",
+    title:"Video Editor and Animator",
+    company:"Nanobit",
+    tags:["Video Editing","Motion Graphics", "Premiere Pro", "After Effects"],
+  },
+  {
     date:"04.2023. - 10.2025.",
     title:"Backend Engineer",
     company:"Atomic Intelligence",
